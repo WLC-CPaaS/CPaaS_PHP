@@ -1,6 +1,6 @@
 # OpenAPI\Client\ProvisionApi
 
-All URIs are relative to http://api.cpaaslabs.net, except if the operation defines another base path.
+All URIs are relative to http://API_HOSTNAME, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -15,7 +15,7 @@ v1AccountAccountIDProvisionFilenameGet($account_id, $filename): \SplFileObject
 
 
 
-Retrieve config file
+Retrieve the configuration details (e.g., settings and parameters) for a device.
 
 ### Example
 

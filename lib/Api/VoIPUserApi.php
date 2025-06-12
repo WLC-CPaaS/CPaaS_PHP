@@ -90,6 +90,9 @@ class VoIPUserApi
         'v1AccountAccountidUserUseridPut' => [
             'application/json',
         ],
+        'v1AccountAccountidUserUseridUserauthPost' => [
+            'application/json',
+        ],
     ];
 
     /**
@@ -1695,6 +1698,332 @@ class VoIPUserApi
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
             'PUT',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation v1AccountAccountidUserUseridUserauthPost
+     *
+     * Impersonate a User
+     *
+     * @param  string $accountid Account ID, 32 alpha numeric (required)
+     * @param  string $userid User ID, 32 alpha numeric (required)
+     * @param  \OpenAPI\Client\Model\ServiceVOIPImpersonateUser $user Payload for impersonate a user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AccountAccountidUserUseridUserauthPost'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\ServiceDocsImpersonateUserGetSingle|\OpenAPI\Client\Model\CPAASError
+     */
+    public function v1AccountAccountidUserUseridUserauthPost($accountid, $userid, $user, string $contentType = self::contentTypes['v1AccountAccountidUserUseridUserauthPost'][0])
+    {
+        list($response) = $this->v1AccountAccountidUserUseridUserauthPostWithHttpInfo($accountid, $userid, $user, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation v1AccountAccountidUserUseridUserauthPostWithHttpInfo
+     *
+     * Impersonate a User
+     *
+     * @param  string $accountid Account ID, 32 alpha numeric (required)
+     * @param  string $userid User ID, 32 alpha numeric (required)
+     * @param  \OpenAPI\Client\Model\ServiceVOIPImpersonateUser $user Payload for impersonate a user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AccountAccountidUserUseridUserauthPost'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\ServiceDocsImpersonateUserGetSingle|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function v1AccountAccountidUserUseridUserauthPostWithHttpInfo($accountid, $userid, $user, string $contentType = self::contentTypes['v1AccountAccountidUserUseridUserauthPost'][0])
+    {
+        $request = $this->v1AccountAccountidUserUseridUserauthPostRequest($accountid, $userid, $user, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\OpenAPI\Client\Model\ServiceDocsImpersonateUserGetSingle',
+                        $request,
+                        $response,
+                    );
+                case 400:
+                    return $this->handleResponseWithDataType(
+                        '\OpenAPI\Client\Model\CPAASError',
+                        $request,
+                        $response,
+                    );
+            }
+
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\OpenAPI\Client\Model\ServiceDocsImpersonateUserGetSingle',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\ServiceDocsImpersonateUserGetSingle',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CPAASError',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation v1AccountAccountidUserUseridUserauthPostAsync
+     *
+     * Impersonate a User
+     *
+     * @param  string $accountid Account ID, 32 alpha numeric (required)
+     * @param  string $userid User ID, 32 alpha numeric (required)
+     * @param  \OpenAPI\Client\Model\ServiceVOIPImpersonateUser $user Payload for impersonate a user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AccountAccountidUserUseridUserauthPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function v1AccountAccountidUserUseridUserauthPostAsync($accountid, $userid, $user, string $contentType = self::contentTypes['v1AccountAccountidUserUseridUserauthPost'][0])
+    {
+        return $this->v1AccountAccountidUserUseridUserauthPostAsyncWithHttpInfo($accountid, $userid, $user, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation v1AccountAccountidUserUseridUserauthPostAsyncWithHttpInfo
+     *
+     * Impersonate a User
+     *
+     * @param  string $accountid Account ID, 32 alpha numeric (required)
+     * @param  string $userid User ID, 32 alpha numeric (required)
+     * @param  \OpenAPI\Client\Model\ServiceVOIPImpersonateUser $user Payload for impersonate a user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AccountAccountidUserUseridUserauthPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function v1AccountAccountidUserUseridUserauthPostAsyncWithHttpInfo($accountid, $userid, $user, string $contentType = self::contentTypes['v1AccountAccountidUserUseridUserauthPost'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\ServiceDocsImpersonateUserGetSingle';
+        $request = $this->v1AccountAccountidUserUseridUserauthPostRequest($accountid, $userid, $user, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'v1AccountAccountidUserUseridUserauthPost'
+     *
+     * @param  string $accountid Account ID, 32 alpha numeric (required)
+     * @param  string $userid User ID, 32 alpha numeric (required)
+     * @param  \OpenAPI\Client\Model\ServiceVOIPImpersonateUser $user Payload for impersonate a user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1AccountAccountidUserUseridUserauthPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function v1AccountAccountidUserUseridUserauthPostRequest($accountid, $userid, $user, string $contentType = self::contentTypes['v1AccountAccountidUserUseridUserauthPost'][0])
+    {
+
+        // verify the required parameter 'accountid' is set
+        if ($accountid === null || (is_array($accountid) && count($accountid) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $accountid when calling v1AccountAccountidUserUseridUserauthPost'
+            );
+        }
+
+        // verify the required parameter 'userid' is set
+        if ($userid === null || (is_array($userid) && count($userid) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $userid when calling v1AccountAccountidUserUseridUserauthPost'
+            );
+        }
+
+        // verify the required parameter 'user' is set
+        if ($user === null || (is_array($user) && count($user) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $user when calling v1AccountAccountidUserUseridUserauthPost'
+            );
+        }
+
+
+        $resourcePath = '/v1/account/{accountid}/user/{userid}/userauth';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($accountid !== null) {
+            $resourcePath = str_replace(
+                '{' . 'accountid' . '}',
+                ObjectSerializer::toPathValue($accountid),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($userid !== null) {
+            $resourcePath = str_replace(
+                '{' . 'userid' . '}',
+                ObjectSerializer::toPathValue($userid),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($user)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($user));
+            } else {
+                $httpBody = $user;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
             $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
