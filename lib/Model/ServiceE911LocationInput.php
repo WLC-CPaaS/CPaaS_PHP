@@ -330,17 +330,8 @@ class ServiceE911LocationInput implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
-        if ($this->container['address_1'] === null) {
-            $invalidProperties[] = "'address_1' can't be null";
-        }
-        if ($this->container['community'] === null) {
-            $invalidProperties[] = "'community' can't be null";
-        }
-        if ($this->container['postal_code'] === null) {
-            $invalidProperties[] = "'postal_code' can't be null";
-        }
-        if ($this->container['state'] === null) {
-            $invalidProperties[] = "'state' can't be null";
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
         }
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
@@ -369,7 +360,7 @@ class ServiceE911LocationInput implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets address_1
      *
-     * @return string
+     * @return string|null
      */
     public function getAddress1()
     {
@@ -379,7 +370,7 @@ class ServiceE911LocationInput implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets address_1
      *
-     * @param string $address_1 address_1
+     * @param string|null $address_1 address_1
      *
      * @return self
      */
@@ -423,7 +414,7 @@ class ServiceE911LocationInput implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets community
      *
-     * @return string
+     * @return string|null
      */
     public function getCommunity()
     {
@@ -433,7 +424,7 @@ class ServiceE911LocationInput implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets community
      *
-     * @param string $community community
+     * @param string|null $community community
      *
      * @return self
      */
@@ -477,7 +468,7 @@ class ServiceE911LocationInput implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets postal_code
      *
-     * @return string
+     * @return string|null
      */
     public function getPostalCode()
     {
@@ -487,7 +478,7 @@ class ServiceE911LocationInput implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets postal_code
      *
-     * @param string $postal_code postal_code
+     * @param string|null $postal_code postal_code
      *
      * @return self
      */
@@ -504,7 +495,7 @@ class ServiceE911LocationInput implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets state
      *
-     * @return string
+     * @return string|null
      */
     public function getState()
     {
@@ -514,7 +505,7 @@ class ServiceE911LocationInput implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets state
      *
-     * @param string $state state
+     * @param string|null $state state
      *
      * @return self
      */
@@ -531,7 +522,7 @@ class ServiceE911LocationInput implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets type
      *
-     * @return string|null
+     * @return string
      */
     public function getType()
     {
@@ -541,7 +532,7 @@ class ServiceE911LocationInput implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string $type type
      *
      * @return self
      */

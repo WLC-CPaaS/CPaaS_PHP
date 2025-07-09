@@ -1,6 +1,6 @@
 # OpenAPI\Client\CallQueueRecipientApi
 
-All URIs are relative to http://API_HOSTNAME, except if the operation defines another base path.
+All URIs are relative to http://api.beta.cpaaslabs.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -12,7 +12,7 @@ All URIs are relative to http://API_HOSTNAME, except if the operation defines an
 ## `v1AccountAccountIDLoginrecipientRecipientIDPost()`
 
 ```php
-v1AccountAccountIDLoginrecipientRecipientIDPost($account_id, $recipient_id, $req_body): \OpenAPI\Client\Model\ServiceDocsCallQueueResponseShort
+v1AccountAccountIDLoginrecipientRecipientIDPost($account_id, $recipient_id, $req_body): \OpenAPI\Client\Model\ServiceDocsCallQueueRecipientLoginLogoutOutput
 ```
 
 Login as Recipient
@@ -60,7 +60,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceDocsCallQueueResponseShort**](../Model/ServiceDocsCallQueueResponseShort.md)
+[**\OpenAPI\Client\Model\ServiceDocsCallQueueRecipientLoginLogoutOutput**](../Model/ServiceDocsCallQueueRecipientLoginLogoutOutput.md)
 
 ### Authorization
 

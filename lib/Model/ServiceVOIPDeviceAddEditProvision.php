@@ -61,7 +61,8 @@ class ServiceVOIPDeviceAddEditProvision implements ModelInterface, ArrayAccess, 
         'endpoint_brand' => 'string',
         'endpoint_family' => 'string',
         'endpoint_model' => 'string',
-        'id' => 'string'
+        'id' => 'string',
+        'line_keys' => '\OpenAPI\Client\Model\ServiceVOIPDeviceAddEditLineKey[]'
     ];
 
     /**
@@ -75,7 +76,8 @@ class ServiceVOIPDeviceAddEditProvision implements ModelInterface, ArrayAccess, 
         'endpoint_brand' => null,
         'endpoint_family' => null,
         'endpoint_model' => null,
-        'id' => null
+        'id' => null,
+        'line_keys' => null
     ];
 
     /**
@@ -87,7 +89,8 @@ class ServiceVOIPDeviceAddEditProvision implements ModelInterface, ArrayAccess, 
         'endpoint_brand' => false,
         'endpoint_family' => false,
         'endpoint_model' => false,
-        'id' => false
+        'id' => false,
+        'line_keys' => false
     ];
 
     /**
@@ -179,7 +182,8 @@ class ServiceVOIPDeviceAddEditProvision implements ModelInterface, ArrayAccess, 
         'endpoint_brand' => 'endpoint_brand',
         'endpoint_family' => 'endpoint_family',
         'endpoint_model' => 'endpoint_model',
-        'id' => 'id'
+        'id' => 'id',
+        'line_keys' => 'line_keys'
     ];
 
     /**
@@ -191,7 +195,8 @@ class ServiceVOIPDeviceAddEditProvision implements ModelInterface, ArrayAccess, 
         'endpoint_brand' => 'setEndpointBrand',
         'endpoint_family' => 'setEndpointFamily',
         'endpoint_model' => 'setEndpointModel',
-        'id' => 'setId'
+        'id' => 'setId',
+        'line_keys' => 'setLineKeys'
     ];
 
     /**
@@ -203,7 +208,8 @@ class ServiceVOIPDeviceAddEditProvision implements ModelInterface, ArrayAccess, 
         'endpoint_brand' => 'getEndpointBrand',
         'endpoint_family' => 'getEndpointFamily',
         'endpoint_model' => 'getEndpointModel',
-        'id' => 'getId'
+        'id' => 'getId',
+        'line_keys' => 'getLineKeys'
     ];
 
     /**
@@ -267,6 +273,7 @@ class ServiceVOIPDeviceAddEditProvision implements ModelInterface, ArrayAccess, 
         $this->setIfExists('endpoint_family', $data ?? [], null);
         $this->setIfExists('endpoint_model', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('line_keys', $data ?? [], null);
     }
 
     /**
@@ -415,6 +422,33 @@ class ServiceVOIPDeviceAddEditProvision implements ModelInterface, ArrayAccess, 
             throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets line_keys
+     *
+     * @return \OpenAPI\Client\Model\ServiceVOIPDeviceAddEditLineKey[]|null
+     */
+    public function getLineKeys()
+    {
+        return $this->container['line_keys'];
+    }
+
+    /**
+     * Sets line_keys
+     *
+     * @param \OpenAPI\Client\Model\ServiceVOIPDeviceAddEditLineKey[]|null $line_keys line_keys
+     *
+     * @return self
+     */
+    public function setLineKeys($line_keys)
+    {
+        if (is_null($line_keys)) {
+            throw new \InvalidArgumentException('non-nullable line_keys cannot be null');
+        }
+        $this->container['line_keys'] = $line_keys;
 
         return $this;
     }

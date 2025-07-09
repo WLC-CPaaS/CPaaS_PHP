@@ -144,7 +144,7 @@ class CallQueueRecipientApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ServiceDocsCallQueueResponseShort|\OpenAPI\Client\Model\CPAASError
+     * @return \OpenAPI\Client\Model\ServiceDocsCallQueueRecipientLoginLogoutOutput|\OpenAPI\Client\Model\CPAASError
      */
     public function v1AccountAccountIDLoginrecipientRecipientIDPost($account_id, $recipient_id, $req_body, string $contentType = self::contentTypes['v1AccountAccountIDLoginrecipientRecipientIDPost'][0])
     {
@@ -164,7 +164,7 @@ class CallQueueRecipientApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ServiceDocsCallQueueResponseShort|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ServiceDocsCallQueueRecipientLoginLogoutOutput|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1AccountAccountIDLoginrecipientRecipientIDPostWithHttpInfo($account_id, $recipient_id, $req_body, string $contentType = self::contentTypes['v1AccountAccountIDLoginrecipientRecipientIDPost'][0])
     {
@@ -196,7 +196,7 @@ class CallQueueRecipientApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ServiceDocsCallQueueResponseShort',
+                        '\OpenAPI\Client\Model\ServiceDocsCallQueueRecipientLoginLogoutOutput',
                         $request,
                         $response,
                     );
@@ -224,7 +224,7 @@ class CallQueueRecipientApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ServiceDocsCallQueueResponseShort',
+                '\OpenAPI\Client\Model\ServiceDocsCallQueueRecipientLoginLogoutOutput',
                 $request,
                 $response,
             );
@@ -233,7 +233,7 @@ class CallQueueRecipientApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ServiceDocsCallQueueResponseShort',
+                        '\OpenAPI\Client\Model\ServiceDocsCallQueueRecipientLoginLogoutOutput',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -291,7 +291,7 @@ class CallQueueRecipientApi
      */
     public function v1AccountAccountIDLoginrecipientRecipientIDPostAsyncWithHttpInfo($account_id, $recipient_id, $req_body, string $contentType = self::contentTypes['v1AccountAccountIDLoginrecipientRecipientIDPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ServiceDocsCallQueueResponseShort';
+        $returnType = '\OpenAPI\Client\Model\ServiceDocsCallQueueRecipientLoginLogoutOutput';
         $request = $this->v1AccountAccountIDLoginrecipientRecipientIDPostRequest($account_id, $recipient_id, $req_body, $contentType);
 
         return $this->client

@@ -282,12 +282,6 @@ class ServiceE911AddLocationInput implements ModelInterface, ArrayAccess, \JsonS
     {
         $invalidProperties = [];
 
-        if ($this->container['location'] === null) {
-            $invalidProperties[] = "'location' can't be null";
-        }
-        if ($this->container['uri'] === null) {
-            $invalidProperties[] = "'uri' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -306,7 +300,7 @@ class ServiceE911AddLocationInput implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets location
      *
-     * @return \OpenAPI\Client\Model\ServiceE911LocationInput
+     * @return \OpenAPI\Client\Model\ServiceE911LocationInput|null
      */
     public function getLocation()
     {
@@ -316,7 +310,7 @@ class ServiceE911AddLocationInput implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets location
      *
-     * @param \OpenAPI\Client\Model\ServiceE911LocationInput $location location
+     * @param \OpenAPI\Client\Model\ServiceE911LocationInput|null $location location
      *
      * @return self
      */
@@ -333,7 +327,7 @@ class ServiceE911AddLocationInput implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets uri
      *
-     * @return \OpenAPI\Client\Model\ServiceE911URIInput
+     * @return \OpenAPI\Client\Model\ServiceE911URIInput|null
      */
     public function getUri()
     {
@@ -343,7 +337,7 @@ class ServiceE911AddLocationInput implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets uri
      *
-     * @param \OpenAPI\Client\Model\ServiceE911URIInput $uri uri
+     * @param \OpenAPI\Client\Model\ServiceE911URIInput|null $uri uri
      *
      * @return self
      */

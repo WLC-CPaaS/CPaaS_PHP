@@ -156,7 +156,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ServiceDocE911URIsApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
+     * @return \OpenAPI\Client\Model\ServiceDocsE911URIsApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
      */
     public function v1E911Get(string $contentType = self::contentTypes['v1E911Get'][0])
     {
@@ -173,7 +173,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ServiceDocE911URIsApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ServiceDocsE911URIsApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1E911GetWithHttpInfo(string $contentType = self::contentTypes['v1E911Get'][0])
     {
@@ -205,7 +205,7 @@ class E911Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ServiceDocE911URIsApiOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911URIsApiOutput',
                         $request,
                         $response,
                     );
@@ -239,7 +239,7 @@ class E911Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ServiceDocE911URIsApiOutput',
+                '\OpenAPI\Client\Model\ServiceDocsE911URIsApiOutput',
                 $request,
                 $response,
             );
@@ -248,7 +248,7 @@ class E911Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ServiceDocE911URIsApiOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911URIsApiOutput',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -308,7 +308,7 @@ class E911Api
      */
     public function v1E911GetAsyncWithHttpInfo(string $contentType = self::contentTypes['v1E911Get'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ServiceDocE911URIsApiOutput';
+        $returnType = '\OpenAPI\Client\Model\ServiceDocsE911URIsApiOutput';
         $request = $this->v1E911GetRequest($contentType);
 
         return $this->client
@@ -433,7 +433,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ServiceDocE911ActiveLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
+     * @return \OpenAPI\Client\Model\ServiceDocsE911ActiveLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
      */
     public function v1E911LocationLocationIDActivatePut($location_id, string $contentType = self::contentTypes['v1E911LocationLocationIDActivatePut'][0])
     {
@@ -451,7 +451,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ServiceDocE911ActiveLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ServiceDocsE911ActiveLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1E911LocationLocationIDActivatePutWithHttpInfo($location_id, string $contentType = self::contentTypes['v1E911LocationLocationIDActivatePut'][0])
     {
@@ -483,7 +483,7 @@ class E911Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ServiceDocE911ActiveLocationOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911ActiveLocationOutput',
                         $request,
                         $response,
                     );
@@ -517,7 +517,7 @@ class E911Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ServiceDocE911ActiveLocationOutput',
+                '\OpenAPI\Client\Model\ServiceDocsE911ActiveLocationOutput',
                 $request,
                 $response,
             );
@@ -526,7 +526,7 @@ class E911Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ServiceDocE911ActiveLocationOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911ActiveLocationOutput',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -588,7 +588,7 @@ class E911Api
      */
     public function v1E911LocationLocationIDActivatePutAsyncWithHttpInfo($location_id, string $contentType = self::contentTypes['v1E911LocationLocationIDActivatePut'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ServiceDocE911ActiveLocationOutput';
+        $returnType = '\OpenAPI\Client\Model\ServiceDocsE911ActiveLocationOutput';
         $request = $this->v1E911LocationLocationIDActivatePutRequest($location_id, $contentType);
 
         return $this->client
@@ -729,7 +729,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ServiceDocE911RemoveLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
+     * @return \OpenAPI\Client\Model\ServiceDocsE911RemoveLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
      */
     public function v1E911LocationLocationIDDelete($location_id, string $contentType = self::contentTypes['v1E911LocationLocationIDDelete'][0])
     {
@@ -747,7 +747,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ServiceDocE911RemoveLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ServiceDocsE911RemoveLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1E911LocationLocationIDDeleteWithHttpInfo($location_id, string $contentType = self::contentTypes['v1E911LocationLocationIDDelete'][0])
     {
@@ -779,7 +779,7 @@ class E911Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ServiceDocE911RemoveLocationOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911RemoveLocationOutput',
                         $request,
                         $response,
                     );
@@ -813,7 +813,7 @@ class E911Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ServiceDocE911RemoveLocationOutput',
+                '\OpenAPI\Client\Model\ServiceDocsE911RemoveLocationOutput',
                 $request,
                 $response,
             );
@@ -822,7 +822,7 @@ class E911Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ServiceDocE911RemoveLocationOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911RemoveLocationOutput',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -884,7 +884,7 @@ class E911Api
      */
     public function v1E911LocationLocationIDDeleteAsyncWithHttpInfo($location_id, string $contentType = self::contentTypes['v1E911LocationLocationIDDelete'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ServiceDocE911RemoveLocationOutput';
+        $returnType = '\OpenAPI\Client\Model\ServiceDocsE911RemoveLocationOutput';
         $request = $this->v1E911LocationLocationIDDeleteRequest($location_id, $contentType);
 
         return $this->client
@@ -1025,7 +1025,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ServiceDocE911ValidateLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
+     * @return \OpenAPI\Client\Model\ServiceDocsE911ValidateLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
      */
     public function v1E911LocationValidatePut($req_body, string $contentType = self::contentTypes['v1E911LocationValidatePut'][0])
     {
@@ -1043,7 +1043,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ServiceDocE911ValidateLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ServiceDocsE911ValidateLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1E911LocationValidatePutWithHttpInfo($req_body, string $contentType = self::contentTypes['v1E911LocationValidatePut'][0])
     {
@@ -1075,7 +1075,7 @@ class E911Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ServiceDocE911ValidateLocationOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911ValidateLocationOutput',
                         $request,
                         $response,
                     );
@@ -1109,7 +1109,7 @@ class E911Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ServiceDocE911ValidateLocationOutput',
+                '\OpenAPI\Client\Model\ServiceDocsE911ValidateLocationOutput',
                 $request,
                 $response,
             );
@@ -1118,7 +1118,7 @@ class E911Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ServiceDocE911ValidateLocationOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911ValidateLocationOutput',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1180,7 +1180,7 @@ class E911Api
      */
     public function v1E911LocationValidatePutAsyncWithHttpInfo($req_body, string $contentType = self::contentTypes['v1E911LocationValidatePut'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ServiceDocE911ValidateLocationOutput';
+        $returnType = '\OpenAPI\Client\Model\ServiceDocsE911ValidateLocationOutput';
         $request = $this->v1E911LocationValidatePutRequest($req_body, $contentType);
 
         return $this->client
@@ -1320,7 +1320,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ServiceDocE911RemoveURIApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
+     * @return \OpenAPI\Client\Model\ServiceDocsE911RemoveURIApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
      */
     public function v1E911PhoneNumberDelete($phone_number, string $contentType = self::contentTypes['v1E911PhoneNumberDelete'][0])
     {
@@ -1338,7 +1338,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ServiceDocE911RemoveURIApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ServiceDocsE911RemoveURIApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1E911PhoneNumberDeleteWithHttpInfo($phone_number, string $contentType = self::contentTypes['v1E911PhoneNumberDelete'][0])
     {
@@ -1370,7 +1370,7 @@ class E911Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ServiceDocE911RemoveURIApiOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911RemoveURIApiOutput',
                         $request,
                         $response,
                     );
@@ -1404,7 +1404,7 @@ class E911Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ServiceDocE911RemoveURIApiOutput',
+                '\OpenAPI\Client\Model\ServiceDocsE911RemoveURIApiOutput',
                 $request,
                 $response,
             );
@@ -1413,7 +1413,7 @@ class E911Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ServiceDocE911RemoveURIApiOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911RemoveURIApiOutput',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1475,7 +1475,7 @@ class E911Api
      */
     public function v1E911PhoneNumberDeleteAsyncWithHttpInfo($phone_number, string $contentType = self::contentTypes['v1E911PhoneNumberDelete'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ServiceDocE911RemoveURIApiOutput';
+        $returnType = '\OpenAPI\Client\Model\ServiceDocsE911RemoveURIApiOutput';
         $request = $this->v1E911PhoneNumberDeleteRequest($phone_number, $contentType);
 
         return $this->client
@@ -1616,7 +1616,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ServiceDocE911ActiveLocationURIApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
+     * @return \OpenAPI\Client\Model\ServiceDocsE911ActiveLocationURIApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
      */
     public function v1E911PhoneNumberLocationActiveGet($phone_number, string $contentType = self::contentTypes['v1E911PhoneNumberLocationActiveGet'][0])
     {
@@ -1634,7 +1634,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ServiceDocE911ActiveLocationURIApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ServiceDocsE911ActiveLocationURIApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1E911PhoneNumberLocationActiveGetWithHttpInfo($phone_number, string $contentType = self::contentTypes['v1E911PhoneNumberLocationActiveGet'][0])
     {
@@ -1666,7 +1666,7 @@ class E911Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ServiceDocE911ActiveLocationURIApiOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911ActiveLocationURIApiOutput',
                         $request,
                         $response,
                     );
@@ -1700,7 +1700,7 @@ class E911Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ServiceDocE911ActiveLocationURIApiOutput',
+                '\OpenAPI\Client\Model\ServiceDocsE911ActiveLocationURIApiOutput',
                 $request,
                 $response,
             );
@@ -1709,7 +1709,7 @@ class E911Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ServiceDocE911ActiveLocationURIApiOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911ActiveLocationURIApiOutput',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1771,7 +1771,7 @@ class E911Api
      */
     public function v1E911PhoneNumberLocationActiveGetAsyncWithHttpInfo($phone_number, string $contentType = self::contentTypes['v1E911PhoneNumberLocationActiveGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ServiceDocE911ActiveLocationURIApiOutput';
+        $returnType = '\OpenAPI\Client\Model\ServiceDocsE911ActiveLocationURIApiOutput';
         $request = $this->v1E911PhoneNumberLocationActiveGetRequest($phone_number, $contentType);
 
         return $this->client
@@ -1912,7 +1912,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ServiceDocE911LocationsURIApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
+     * @return \OpenAPI\Client\Model\ServiceDocsE911LocationsURIApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
      */
     public function v1E911PhoneNumberLocationGet($phone_number, string $contentType = self::contentTypes['v1E911PhoneNumberLocationGet'][0])
     {
@@ -1930,7 +1930,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ServiceDocE911LocationsURIApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ServiceDocsE911LocationsURIApiOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1E911PhoneNumberLocationGetWithHttpInfo($phone_number, string $contentType = self::contentTypes['v1E911PhoneNumberLocationGet'][0])
     {
@@ -1962,7 +1962,7 @@ class E911Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ServiceDocE911LocationsURIApiOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911LocationsURIApiOutput',
                         $request,
                         $response,
                     );
@@ -1996,7 +1996,7 @@ class E911Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ServiceDocE911LocationsURIApiOutput',
+                '\OpenAPI\Client\Model\ServiceDocsE911LocationsURIApiOutput',
                 $request,
                 $response,
             );
@@ -2005,7 +2005,7 @@ class E911Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ServiceDocE911LocationsURIApiOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911LocationsURIApiOutput',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2067,7 +2067,7 @@ class E911Api
      */
     public function v1E911PhoneNumberLocationGetAsyncWithHttpInfo($phone_number, string $contentType = self::contentTypes['v1E911PhoneNumberLocationGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ServiceDocE911LocationsURIApiOutput';
+        $returnType = '\OpenAPI\Client\Model\ServiceDocsE911LocationsURIApiOutput';
         $request = $this->v1E911PhoneNumberLocationGetRequest($phone_number, $contentType);
 
         return $this->client
@@ -2208,7 +2208,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ServiceDocE911AddLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
+     * @return \OpenAPI\Client\Model\ServiceDocsE911AddLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError
      */
     public function v1E911Post($req_body, string $contentType = self::contentTypes['v1E911Post'][0])
     {
@@ -2226,7 +2226,7 @@ class E911Api
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ServiceDocE911AddLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ServiceDocsE911AddLocationOutput|\OpenAPI\Client\Model\CPAASError|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1E911PostWithHttpInfo($req_body, string $contentType = self::contentTypes['v1E911Post'][0])
     {
@@ -2258,7 +2258,7 @@ class E911Api
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ServiceDocE911AddLocationOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911AddLocationOutput',
                         $request,
                         $response,
                     );
@@ -2292,7 +2292,7 @@ class E911Api
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ServiceDocE911AddLocationOutput',
+                '\OpenAPI\Client\Model\ServiceDocsE911AddLocationOutput',
                 $request,
                 $response,
             );
@@ -2301,7 +2301,7 @@ class E911Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ServiceDocE911AddLocationOutput',
+                        '\OpenAPI\Client\Model\ServiceDocsE911AddLocationOutput',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2363,7 +2363,7 @@ class E911Api
      */
     public function v1E911PostAsyncWithHttpInfo($req_body, string $contentType = self::contentTypes['v1E911Post'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ServiceDocE911AddLocationOutput';
+        $returnType = '\OpenAPI\Client\Model\ServiceDocsE911AddLocationOutput';
         $request = $this->v1E911PostRequest($req_body, $contentType);
 
         return $this->client

@@ -275,9 +275,6 @@ class ServiceE911ValidateLocationInput implements ModelInterface, ArrayAccess, \
     {
         $invalidProperties = [];
 
-        if ($this->container['location'] === null) {
-            $invalidProperties[] = "'location' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -296,7 +293,7 @@ class ServiceE911ValidateLocationInput implements ModelInterface, ArrayAccess, \
     /**
      * Gets location
      *
-     * @return \OpenAPI\Client\Model\ServiceE911LocationInput
+     * @return \OpenAPI\Client\Model\ServiceE911LocationInput|null
      */
     public function getLocation()
     {
@@ -306,7 +303,7 @@ class ServiceE911ValidateLocationInput implements ModelInterface, ArrayAccess, \
     /**
      * Sets location
      *
-     * @param \OpenAPI\Client\Model\ServiceE911LocationInput $location location
+     * @param \OpenAPI\Client\Model\ServiceE911LocationInput|null $location location
      *
      * @return self
      */

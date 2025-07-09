@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\OpenAPI\Client\Model\ServiceQueueRecipientOutputFull**](ServiceQueueRecipientOutputFull.md) |  | [optional]
+**data** | [**\OpenAPI\Client\Model\ServiceQueueRecipientOutput**](ServiceQueueRecipientOutput.md) |  | [optional]
 **next_start_key** | **string** | List Pagination: Used to get the next page of results. Will not exist if this is the last page. | [optional]
 **page_size** | **int** | List Pagination: The number of results returned in this page | [optional]
 **request_id** | **string** | Unique id for each request | [optional]

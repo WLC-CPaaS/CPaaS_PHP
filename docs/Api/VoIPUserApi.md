@@ -1,6 +1,6 @@
 # OpenAPI\Client\VoIPUserApi
 
-All URIs are relative to http://API_HOSTNAME, except if the operation defines another base path.
+All URIs are relative to http://api.beta.cpaaslabs.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -344,7 +344,7 @@ v1AccountAccountidUserUseridUserauthPost($accountid, $userid, $user): \OpenAPI\C
 
 Impersonate a User
 
-Impersonate as another user if you have access to admin.
+Retrieve a token for making presence calls.
 
 ### Example
 

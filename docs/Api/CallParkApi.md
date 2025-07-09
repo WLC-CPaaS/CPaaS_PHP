@@ -1,6 +1,6 @@
 # OpenAPI\Client\CallParkApi
 
-All URIs are relative to http://API_HOSTNAME, except if the operation defines another base path.
+All URIs are relative to http://api.beta.cpaaslabs.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -10,7 +10,7 @@ All URIs are relative to http://API_HOSTNAME, except if the operation defines an
 ## `v1AccountAccountIDParkedcallGet()`
 
 ```php
-v1AccountAccountIDParkedcallGet($account_id): \OpenAPI\Client\Model\ServiceDocsParkedcallGet
+v1AccountAccountIDParkedcallGet($account_id): \OpenAPI\Client\Model\ServiceDocsCallparkGet
 ```
 
 Get Call Park List
@@ -54,7 +54,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceDocsParkedcallGet**](../Model/ServiceDocsParkedcallGet.md)
+[**\OpenAPI\Client\Model\ServiceDocsCallparkGet**](../Model/ServiceDocsCallparkGet.md)
 
 ### Authorization
 

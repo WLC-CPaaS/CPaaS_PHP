@@ -1,6 +1,6 @@
 # OpenAPI\Client\E911Api
 
-All URIs are relative to http://API_HOSTNAME, except if the operation defines another base path.
+All URIs are relative to http://api.beta.cpaaslabs.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -17,7 +17,7 @@ All URIs are relative to http://API_HOSTNAME, except if the operation defines an
 ## `v1E911Get()`
 
 ```php
-v1E911Get(): \OpenAPI\Client\Model\ServiceDocE911URIsApiOutput
+v1E911Get(): \OpenAPI\Client\Model\ServiceDocsE911URIsApiOutput
 ```
 
 Get E911 List
@@ -52,7 +52,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceDocE911URIsApiOutput**](../Model/ServiceDocE911URIsApiOutput.md)
+[**\OpenAPI\Client\Model\ServiceDocsE911URIsApiOutput**](../Model/ServiceDocsE911URIsApiOutput.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 ## `v1E911LocationLocationIDActivatePut()`
 
 ```php
-v1E911LocationLocationIDActivatePut($location_id): \OpenAPI\Client\Model\ServiceDocE911ActiveLocationOutput
+v1E911LocationLocationIDActivatePut($location_id): \OpenAPI\Client\Model\ServiceDocsE911ActiveLocationOutput
 ```
 
 Activate E911 Location
@@ -108,7 +108,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceDocE911ActiveLocationOutput**](../Model/ServiceDocE911ActiveLocationOutput.md)
+[**\OpenAPI\Client\Model\ServiceDocsE911ActiveLocationOutput**](../Model/ServiceDocsE911ActiveLocationOutput.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ No authorization required
 ## `v1E911LocationLocationIDDelete()`
 
 ```php
-v1E911LocationLocationIDDelete($location_id): \OpenAPI\Client\Model\ServiceDocE911RemoveLocationOutput
+v1E911LocationLocationIDDelete($location_id): \OpenAPI\Client\Model\ServiceDocsE911RemoveLocationOutput
 ```
 
 Delete E911 Location
@@ -164,7 +164,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceDocE911RemoveLocationOutput**](../Model/ServiceDocE911RemoveLocationOutput.md)
+[**\OpenAPI\Client\Model\ServiceDocsE911RemoveLocationOutput**](../Model/ServiceDocsE911RemoveLocationOutput.md)
 
 ### Authorization
 
@@ -182,7 +182,7 @@ No authorization required
 ## `v1E911LocationValidatePut()`
 
 ```php
-v1E911LocationValidatePut($req_body): \OpenAPI\Client\Model\ServiceDocE911ValidateLocationOutput
+v1E911LocationValidatePut($req_body): \OpenAPI\Client\Model\ServiceDocsE911ValidateLocationOutput
 ```
 
 Validate a Location
@@ -220,7 +220,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceDocE911ValidateLocationOutput**](../Model/ServiceDocE911ValidateLocationOutput.md)
+[**\OpenAPI\Client\Model\ServiceDocsE911ValidateLocationOutput**](../Model/ServiceDocsE911ValidateLocationOutput.md)
 
 ### Authorization
 
@@ -238,7 +238,7 @@ No authorization required
 ## `v1E911PhoneNumberDelete()`
 
 ```php
-v1E911PhoneNumberDelete($phone_number): \OpenAPI\Client\Model\ServiceDocE911RemoveURIApiOutput
+v1E911PhoneNumberDelete($phone_number): \OpenAPI\Client\Model\ServiceDocsE911RemoveURIApiOutput
 ```
 
 Delete E911 Phone Number
@@ -276,7 +276,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceDocE911RemoveURIApiOutput**](../Model/ServiceDocE911RemoveURIApiOutput.md)
+[**\OpenAPI\Client\Model\ServiceDocsE911RemoveURIApiOutput**](../Model/ServiceDocsE911RemoveURIApiOutput.md)
 
 ### Authorization
 
@@ -294,7 +294,7 @@ No authorization required
 ## `v1E911PhoneNumberLocationActiveGet()`
 
 ```php
-v1E911PhoneNumberLocationActiveGet($phone_number): \OpenAPI\Client\Model\ServiceDocE911ActiveLocationURIApiOutput
+v1E911PhoneNumberLocationActiveGet($phone_number): \OpenAPI\Client\Model\ServiceDocsE911ActiveLocationURIApiOutput
 ```
 
 Get Actvie Location for a Phone Number
@@ -332,7 +332,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceDocE911ActiveLocationURIApiOutput**](../Model/ServiceDocE911ActiveLocationURIApiOutput.md)
+[**\OpenAPI\Client\Model\ServiceDocsE911ActiveLocationURIApiOutput**](../Model/ServiceDocsE911ActiveLocationURIApiOutput.md)
 
 ### Authorization
 
@@ -350,7 +350,7 @@ No authorization required
 ## `v1E911PhoneNumberLocationGet()`
 
 ```php
-v1E911PhoneNumberLocationGet($phone_number): \OpenAPI\Client\Model\ServiceDocE911LocationsURIApiOutput
+v1E911PhoneNumberLocationGet($phone_number): \OpenAPI\Client\Model\ServiceDocsE911LocationsURIApiOutput
 ```
 
 Get Location List for Phone Number
@@ -388,7 +388,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceDocE911LocationsURIApiOutput**](../Model/ServiceDocE911LocationsURIApiOutput.md)
+[**\OpenAPI\Client\Model\ServiceDocsE911LocationsURIApiOutput**](../Model/ServiceDocsE911LocationsURIApiOutput.md)
 
 ### Authorization
 
@@ -406,7 +406,7 @@ No authorization required
 ## `v1E911Post()`
 
 ```php
-v1E911Post($req_body): \OpenAPI\Client\Model\ServiceDocE911AddLocationOutput
+v1E911Post($req_body): \OpenAPI\Client\Model\ServiceDocsE911AddLocationOutput
 ```
 
 Create an E911 Location
@@ -444,7 +444,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceDocE911AddLocationOutput**](../Model/ServiceDocE911AddLocationOutput.md)
+[**\OpenAPI\Client\Model\ServiceDocsE911AddLocationOutput**](../Model/ServiceDocsE911AddLocationOutput.md)
 
 ### Authorization
 

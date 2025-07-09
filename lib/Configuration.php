@@ -94,7 +94,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'http://API_HOSTNAME';
+    protected $host = 'http://api.beta.cpaaslabs.net';
 
     /**
      * User agent of the HTTP request, set to "OpenAPI-Generator/{version}/PHP" by default
@@ -473,7 +473,7 @@ class Configuration
     {
         return [
             [
-                "url" => "//API_HOSTNAME",
+                "url" => "//api.beta.cpaaslabs.net",
                 "description" => "No description provided",
             ]
         ];

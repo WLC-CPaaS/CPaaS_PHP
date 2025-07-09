@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**location** | [**\OpenAPI\Client\Model\ServiceE911LocationInput**](ServiceE911LocationInput.md) |  |
-**uri** | [**\OpenAPI\Client\Model\ServiceE911URIInput**](ServiceE911URIInput.md) |  |
+**location** | [**\OpenAPI\Client\Model\ServiceE911LocationInput**](ServiceE911LocationInput.md) |  | [optional]
+**uri** | [**\OpenAPI\Client\Model\ServiceE911URIInput**](ServiceE911URIInput.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

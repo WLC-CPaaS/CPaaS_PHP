@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address_1** | **string** |  |
+**address_1** | **string** |  | [optional]
 **address_2** | **string** |  | [optional]
-**community** | **string** |  |
+**community** | **string** |  | [optional]
 **plus_four** | **string** |  | [optional]
-**postal_code** | **string** |  |
-**state** | **string** |  |
-**type** | **string** |  | [optional]
+**postal_code** | **string** |  | [optional]
+**state** | **string** |  | [optional]
+**type** | **string** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

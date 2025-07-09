@@ -1,6 +1,6 @@
 # OpenAPI\Client\TemporalRuleApi
 
-All URIs are relative to http://API_HOSTNAME, except if the operation defines another base path.
+All URIs are relative to http://api.beta.cpaaslabs.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |

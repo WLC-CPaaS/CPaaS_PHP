@@ -136,7 +136,7 @@ class CallParkApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ServiceDocsParkedcallGet|\OpenAPI\Client\Model\CPAASError
+     * @return \OpenAPI\Client\Model\ServiceDocsCallparkGet|\OpenAPI\Client\Model\CPAASError
      */
     public function v1AccountAccountIDParkedcallGet($account_id, string $contentType = self::contentTypes['v1AccountAccountIDParkedcallGet'][0])
     {
@@ -154,7 +154,7 @@ class CallParkApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ServiceDocsParkedcallGet|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ServiceDocsCallparkGet|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1AccountAccountIDParkedcallGetWithHttpInfo($account_id, string $contentType = self::contentTypes['v1AccountAccountIDParkedcallGet'][0])
     {
@@ -186,7 +186,7 @@ class CallParkApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ServiceDocsParkedcallGet',
+                        '\OpenAPI\Client\Model\ServiceDocsCallparkGet',
                         $request,
                         $response,
                     );
@@ -214,7 +214,7 @@ class CallParkApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ServiceDocsParkedcallGet',
+                '\OpenAPI\Client\Model\ServiceDocsCallparkGet',
                 $request,
                 $response,
             );
@@ -223,7 +223,7 @@ class CallParkApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ServiceDocsParkedcallGet',
+                        '\OpenAPI\Client\Model\ServiceDocsCallparkGet',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -277,7 +277,7 @@ class CallParkApi
      */
     public function v1AccountAccountIDParkedcallGetAsyncWithHttpInfo($account_id, string $contentType = self::contentTypes['v1AccountAccountIDParkedcallGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ServiceDocsParkedcallGet';
+        $returnType = '\OpenAPI\Client\Model\ServiceDocsCallparkGet';
         $request = $this->v1AccountAccountIDParkedcallGetRequest($account_id, $contentType);
 
         return $this->client

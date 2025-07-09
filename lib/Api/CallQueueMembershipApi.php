@@ -143,7 +143,7 @@ class CallQueueMembershipApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ServiceDocsCallQueueMemberGetSingle|\OpenAPI\Client\Model\CPAASError
+     * @return \OpenAPI\Client\Model\ServiceDocsQueueMembershipOutput|\OpenAPI\Client\Model\CPAASError
      */
     public function v1AccountAccountIDQueuemembershipPost($account_id, $req_body, string $contentType = self::contentTypes['v1AccountAccountIDQueuemembershipPost'][0])
     {
@@ -162,7 +162,7 @@ class CallQueueMembershipApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ServiceDocsCallQueueMemberGetSingle|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ServiceDocsQueueMembershipOutput|\OpenAPI\Client\Model\CPAASError, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1AccountAccountIDQueuemembershipPostWithHttpInfo($account_id, $req_body, string $contentType = self::contentTypes['v1AccountAccountIDQueuemembershipPost'][0])
     {
@@ -194,7 +194,7 @@ class CallQueueMembershipApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\ServiceDocsCallQueueMemberGetSingle',
+                        '\OpenAPI\Client\Model\ServiceDocsQueueMembershipOutput',
                         $request,
                         $response,
                     );
@@ -222,7 +222,7 @@ class CallQueueMembershipApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\ServiceDocsCallQueueMemberGetSingle',
+                '\OpenAPI\Client\Model\ServiceDocsQueueMembershipOutput',
                 $request,
                 $response,
             );
@@ -231,7 +231,7 @@ class CallQueueMembershipApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ServiceDocsCallQueueMemberGetSingle',
+                        '\OpenAPI\Client\Model\ServiceDocsQueueMembershipOutput',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -287,7 +287,7 @@ class CallQueueMembershipApi
      */
     public function v1AccountAccountIDQueuemembershipPostAsyncWithHttpInfo($account_id, $req_body, string $contentType = self::contentTypes['v1AccountAccountIDQueuemembershipPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ServiceDocsCallQueueMemberGetSingle';
+        $returnType = '\OpenAPI\Client\Model\ServiceDocsQueueMembershipOutput';
         $request = $this->v1AccountAccountIDQueuemembershipPostRequest($account_id, $req_body, $contentType);
 
         return $this->client

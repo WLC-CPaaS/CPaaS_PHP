@@ -58,7 +58,7 @@ class ServiceDocsGetQueueRecipients implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\OpenAPI\Client\Model\ServiceQueueRecipientOutputFull',
+        'data' => '\OpenAPI\Client\Model\ServiceQueueRecipientOutput',
         'next_start_key' => 'string',
         'page_size' => 'int',
         'request_id' => 'string',
@@ -328,7 +328,7 @@ class ServiceDocsGetQueueRecipients implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\ServiceQueueRecipientOutputFull|null
+     * @return \OpenAPI\Client\Model\ServiceQueueRecipientOutput|null
      */
     public function getData()
     {
@@ -338,7 +338,7 @@ class ServiceDocsGetQueueRecipients implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\ServiceQueueRecipientOutputFull|null $data data
+     * @param \OpenAPI\Client\Model\ServiceQueueRecipientOutput|null $data data
      *
      * @return self
      */

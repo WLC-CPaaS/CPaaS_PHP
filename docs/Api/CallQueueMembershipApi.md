@@ -1,6 +1,6 @@
 # OpenAPI\Client\CallQueueMembershipApi
 
-All URIs are relative to http://API_HOSTNAME, except if the operation defines another base path.
+All URIs are relative to http://api.beta.cpaaslabs.net, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -12,7 +12,7 @@ All URIs are relative to http://API_HOSTNAME, except if the operation defines an
 ## `v1AccountAccountIDQueuemembershipPost()`
 
 ```php
-v1AccountAccountIDQueuemembershipPost($account_id, $req_body): \OpenAPI\Client\Model\ServiceDocsCallQueueMemberGetSingle
+v1AccountAccountIDQueuemembershipPost($account_id, $req_body): \OpenAPI\Client\Model\ServiceDocsQueueMembershipOutput
 ```
 
 Grant Queue Membership to User
@@ -58,7 +58,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ServiceDocsCallQueueMemberGetSingle**](../Model/ServiceDocsCallQueueMemberGetSingle.md)
+[**\OpenAPI\Client\Model\ServiceDocsQueueMembershipOutput**](../Model/ServiceDocsQueueMembershipOutput.md)
 
 ### Authorization
 

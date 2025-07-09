@@ -282,9 +282,6 @@ class ServiceE911URIInput implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['caller_name'] === null) {
-            $invalidProperties[] = "'caller_name' can't be null";
-        }
         if ($this->container['uri'] === null) {
             $invalidProperties[] = "'uri' can't be null";
         }
@@ -306,7 +303,7 @@ class ServiceE911URIInput implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets caller_name
      *
-     * @return string
+     * @return string|null
      */
     public function getCallerName()
     {
@@ -316,7 +313,7 @@ class ServiceE911URIInput implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets caller_name
      *
-     * @param string $caller_name caller_name
+     * @param string|null $caller_name caller_name
      *
      * @return self
      */
