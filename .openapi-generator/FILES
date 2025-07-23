@@ -69,6 +69,7 @@ docs/Model/ModelsDeviceOutputFullProvision.md
 docs/Model/ModelsDeviceOutputFullSIP.md
 docs/Model/ModelsFamily.md
 docs/Model/ModelsGenerateConfigFileRequest.md
+docs/Model/ModelsLineKeyProcessedTempData.md
 docs/Model/ModelsModel.md
 docs/Model/ModelsMusicOnHold.md
 docs/Model/ModelsTemplate.md
@@ -362,6 +363,7 @@ lib/Model/ModelsDeviceOutputFullProvision.php
 lib/Model/ModelsDeviceOutputFullSIP.php
 lib/Model/ModelsFamily.php
 lib/Model/ModelsGenerateConfigFileRequest.php
+lib/Model/ModelsLineKeyProcessedTempData.php
 lib/Model/ModelsModel.php
 lib/Model/ModelsMusicOnHold.php
 lib/Model/ModelsTemplate.php
@@ -586,19 +588,4 @@ lib/Model/ServiceWebhookDeleteOutput.php
 lib/Model/ServiceWebhookEdit.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Model/ModelsVOIPDeviceOutputLineKeyTest.php
-test/Model/ServiceDocsCallQueueRecipientLoginLogoutOutputTest.php
-test/Model/ServiceDocsCallparkGetTest.php
-test/Model/ServiceDocsE911ActiveLocationOutputTest.php
-test/Model/ServiceDocsE911ActiveLocationURIApiOutputTest.php
-test/Model/ServiceDocsE911AddLocationOutputTest.php
-test/Model/ServiceDocsE911LocationsURIApiOutputTest.php
-test/Model/ServiceDocsE911RemoveLocationOutputTest.php
-test/Model/ServiceDocsE911RemoveURIApiOutputTest.php
-test/Model/ServiceDocsE911URIsApiOutputTest.php
-test/Model/ServiceDocsE911ValidateLocationOutputTest.php
-test/Model/ServiceDocsQueueMembershipOutputTest.php
-test/Model/ServiceQueueRecipientOutputRecipientFeaturesTest.php
-test/Model/ServiceQueueRecipientOutputRecipientTest.php
-test/Model/ServiceQueueRecipientOutputTest.php
-test/Model/ServiceVOIPDeviceAddEditLineKeyTest.php
+test/Model/ModelsLineKeyProcessedTempDataTest.php

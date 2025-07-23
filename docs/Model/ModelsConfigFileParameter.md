@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **https_host** | **string** |  | [optional]
 **https_password** | **string** |  | [optional]
 **https_username** | **string** |  | [optional]
+**line_keys** | [**\OpenAPI\Client\Model\ModelsLineKeyProcessedTempData[]**](ModelsLineKeyProcessedTempData.md) |  | [optional]
 **mac_address** | **string** |  | [optional]
 **realm** | **string** |  | [optional]
 **sip_password** | **string** |  | [optional]

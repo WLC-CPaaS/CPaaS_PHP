@@ -62,6 +62,7 @@ class ModelsConfigFileParameter implements ModelInterface, ArrayAccess, \JsonSer
         'https_host' => 'string',
         'https_password' => 'string',
         'https_username' => 'string',
+        'line_keys' => '\OpenAPI\Client\Model\ModelsLineKeyProcessedTempData[]',
         'mac_address' => 'string',
         'realm' => 'string',
         'sip_password' => 'string',
@@ -82,6 +83,7 @@ class ModelsConfigFileParameter implements ModelInterface, ArrayAccess, \JsonSer
         'https_host' => null,
         'https_password' => null,
         'https_username' => null,
+        'line_keys' => null,
         'mac_address' => null,
         'realm' => null,
         'sip_password' => null,
@@ -100,6 +102,7 @@ class ModelsConfigFileParameter implements ModelInterface, ArrayAccess, \JsonSer
         'https_host' => false,
         'https_password' => false,
         'https_username' => false,
+        'line_keys' => false,
         'mac_address' => false,
         'realm' => false,
         'sip_password' => false,
@@ -198,6 +201,7 @@ class ModelsConfigFileParameter implements ModelInterface, ArrayAccess, \JsonSer
         'https_host' => 'https_host',
         'https_password' => 'https_password',
         'https_username' => 'https_username',
+        'line_keys' => 'line_keys',
         'mac_address' => 'mac_address',
         'realm' => 'realm',
         'sip_password' => 'sip_password',
@@ -216,6 +220,7 @@ class ModelsConfigFileParameter implements ModelInterface, ArrayAccess, \JsonSer
         'https_host' => 'setHttpsHost',
         'https_password' => 'setHttpsPassword',
         'https_username' => 'setHttpsUsername',
+        'line_keys' => 'setLineKeys',
         'mac_address' => 'setMacAddress',
         'realm' => 'setRealm',
         'sip_password' => 'setSipPassword',
@@ -234,6 +239,7 @@ class ModelsConfigFileParameter implements ModelInterface, ArrayAccess, \JsonSer
         'https_host' => 'getHttpsHost',
         'https_password' => 'getHttpsPassword',
         'https_username' => 'getHttpsUsername',
+        'line_keys' => 'getLineKeys',
         'mac_address' => 'getMacAddress',
         'realm' => 'getRealm',
         'sip_password' => 'getSipPassword',
@@ -303,6 +309,7 @@ class ModelsConfigFileParameter implements ModelInterface, ArrayAccess, \JsonSer
         $this->setIfExists('https_host', $data ?? [], null);
         $this->setIfExists('https_password', $data ?? [], null);
         $this->setIfExists('https_username', $data ?? [], null);
+        $this->setIfExists('line_keys', $data ?? [], null);
         $this->setIfExists('mac_address', $data ?? [], null);
         $this->setIfExists('realm', $data ?? [], null);
         $this->setIfExists('sip_password', $data ?? [], null);
@@ -457,6 +464,33 @@ class ModelsConfigFileParameter implements ModelInterface, ArrayAccess, \JsonSer
             throw new \InvalidArgumentException('non-nullable https_username cannot be null');
         }
         $this->container['https_username'] = $https_username;
+
+        return $this;
+    }
+
+    /**
+     * Gets line_keys
+     *
+     * @return \OpenAPI\Client\Model\ModelsLineKeyProcessedTempData[]|null
+     */
+    public function getLineKeys()
+    {
+        return $this->container['line_keys'];
+    }
+
+    /**
+     * Sets line_keys
+     *
+     * @param \OpenAPI\Client\Model\ModelsLineKeyProcessedTempData[]|null $line_keys line_keys
+     *
+     * @return self
+     */
+    public function setLineKeys($line_keys)
+    {
+        if (is_null($line_keys)) {
+            throw new \InvalidArgumentException('non-nullable line_keys cannot be null');
+        }
+        $this->container['line_keys'] = $line_keys;
 
         return $this;
     }
