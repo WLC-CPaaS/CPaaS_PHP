@@ -221,7 +221,6 @@ docs/Model/ServiceFeatureCode.md
 docs/Model/ServiceGroupOutputFull.md
 docs/Model/ServiceGroupOutputShort.md
 docs/Model/ServiceImpersonateUserOutputFull.md
-docs/Model/ServiceImpersonatedUserInfo.md
 docs/Model/ServiceMediaOutputFull.md
 docs/Model/ServiceMediaOutputShort.md
 docs/Model/ServiceMetaflowOutput.md
@@ -246,7 +245,6 @@ docs/Model/ServiceSystemStatusCPAASService.md
 docs/Model/ServiceSystemStatusMessagingService.md
 docs/Model/ServiceSystemStatusOutput.md
 docs/Model/ServiceSystemStatusSupportService.md
-docs/Model/ServiceSystemStatusVOIPService.md
 docs/Model/ServiceTTS.md
 docs/Model/ServiceTemporalRuleOutputFull.md
 docs/Model/ServiceTemporalRuleOutputShort.md
@@ -515,7 +513,6 @@ lib/Model/ServiceFeatureCode.php
 lib/Model/ServiceGroupOutputFull.php
 lib/Model/ServiceGroupOutputShort.php
 lib/Model/ServiceImpersonateUserOutputFull.php
-lib/Model/ServiceImpersonatedUserInfo.php
 lib/Model/ServiceMediaOutputFull.php
 lib/Model/ServiceMediaOutputShort.php
 lib/Model/ServiceMetaflowOutput.php
@@ -540,7 +537,6 @@ lib/Model/ServiceSystemStatusCPAASService.php
 lib/Model/ServiceSystemStatusMessagingService.php
 lib/Model/ServiceSystemStatusOutput.php
 lib/Model/ServiceSystemStatusSupportService.php
-lib/Model/ServiceSystemStatusVOIPService.php
 lib/Model/ServiceTTS.php
 lib/Model/ServiceTemporalRuleOutputFull.php
 lib/Model/ServiceTemporalRuleOutputShort.php
@@ -588,4 +584,3 @@ lib/Model/ServiceWebhookDeleteOutput.php
 lib/Model/ServiceWebhookEdit.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Model/ModelsLineKeyProcessedTempDataTest.php

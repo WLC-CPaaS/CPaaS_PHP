@@ -60,8 +60,7 @@ class ServiceSystemStatusOutput implements ModelInterface, ArrayAccess, \JsonSer
     protected static $openAPITypes = [
         'cpaas_services' => '\OpenAPI\Client\Model\ServiceSystemStatusCPAASService',
         'messaging_services' => '\OpenAPI\Client\Model\ServiceSystemStatusMessagingService',
-        'support_services' => '\OpenAPI\Client\Model\ServiceSystemStatusSupportService',
-        'voip_services' => '\OpenAPI\Client\Model\ServiceSystemStatusVOIPService'
+        'support_services' => '\OpenAPI\Client\Model\ServiceSystemStatusSupportService'
     ];
 
     /**
@@ -74,8 +73,7 @@ class ServiceSystemStatusOutput implements ModelInterface, ArrayAccess, \JsonSer
     protected static $openAPIFormats = [
         'cpaas_services' => null,
         'messaging_services' => null,
-        'support_services' => null,
-        'voip_services' => null
+        'support_services' => null
     ];
 
     /**
@@ -86,8 +84,7 @@ class ServiceSystemStatusOutput implements ModelInterface, ArrayAccess, \JsonSer
     protected static array $openAPINullables = [
         'cpaas_services' => false,
         'messaging_services' => false,
-        'support_services' => false,
-        'voip_services' => false
+        'support_services' => false
     ];
 
     /**
@@ -178,8 +175,7 @@ class ServiceSystemStatusOutput implements ModelInterface, ArrayAccess, \JsonSer
     protected static $attributeMap = [
         'cpaas_services' => 'cpaas_services',
         'messaging_services' => 'messaging_services',
-        'support_services' => 'support_services',
-        'voip_services' => 'voip_services'
+        'support_services' => 'support_services'
     ];
 
     /**
@@ -190,8 +186,7 @@ class ServiceSystemStatusOutput implements ModelInterface, ArrayAccess, \JsonSer
     protected static $setters = [
         'cpaas_services' => 'setCpaasServices',
         'messaging_services' => 'setMessagingServices',
-        'support_services' => 'setSupportServices',
-        'voip_services' => 'setVoipServices'
+        'support_services' => 'setSupportServices'
     ];
 
     /**
@@ -202,8 +197,7 @@ class ServiceSystemStatusOutput implements ModelInterface, ArrayAccess, \JsonSer
     protected static $getters = [
         'cpaas_services' => 'getCpaasServices',
         'messaging_services' => 'getMessagingServices',
-        'support_services' => 'getSupportServices',
-        'voip_services' => 'getVoipServices'
+        'support_services' => 'getSupportServices'
     ];
 
     /**
@@ -266,7 +260,6 @@ class ServiceSystemStatusOutput implements ModelInterface, ArrayAccess, \JsonSer
         $this->setIfExists('cpaas_services', $data ?? [], null);
         $this->setIfExists('messaging_services', $data ?? [], null);
         $this->setIfExists('support_services', $data ?? [], null);
-        $this->setIfExists('voip_services', $data ?? [], null);
     }
 
     /**
@@ -388,33 +381,6 @@ class ServiceSystemStatusOutput implements ModelInterface, ArrayAccess, \JsonSer
             throw new \InvalidArgumentException('non-nullable support_services cannot be null');
         }
         $this->container['support_services'] = $support_services;
-
-        return $this;
-    }
-
-    /**
-     * Gets voip_services
-     *
-     * @return \OpenAPI\Client\Model\ServiceSystemStatusVOIPService|null
-     */
-    public function getVoipServices()
-    {
-        return $this->container['voip_services'];
-    }
-
-    /**
-     * Sets voip_services
-     *
-     * @param \OpenAPI\Client\Model\ServiceSystemStatusVOIPService|null $voip_services voip_services
-     *
-     * @return self
-     */
-    public function setVoipServices($voip_services)
-    {
-        if (is_null($voip_services)) {
-            throw new \InvalidArgumentException('non-nullable voip_services cannot be null');
-        }
-        $this->container['voip_services'] = $voip_services;
 
         return $this;
     }

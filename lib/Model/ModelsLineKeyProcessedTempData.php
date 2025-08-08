@@ -59,7 +59,6 @@ class ModelsLineKeyProcessedTempData implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPITypes = [
         'label' => 'string',
-        'line' => 'int',
         'type' => 'string',
         'value' => 'string'
     ];
@@ -73,7 +72,6 @@ class ModelsLineKeyProcessedTempData implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPIFormats = [
         'label' => null,
-        'line' => null,
         'type' => null,
         'value' => null
     ];
@@ -85,7 +83,6 @@ class ModelsLineKeyProcessedTempData implements ModelInterface, ArrayAccess, \Js
       */
     protected static array $openAPINullables = [
         'label' => false,
-        'line' => false,
         'type' => false,
         'value' => false
     ];
@@ -177,7 +174,6 @@ class ModelsLineKeyProcessedTempData implements ModelInterface, ArrayAccess, \Js
      */
     protected static $attributeMap = [
         'label' => 'label',
-        'line' => 'line',
         'type' => 'type',
         'value' => 'value'
     ];
@@ -189,7 +185,6 @@ class ModelsLineKeyProcessedTempData implements ModelInterface, ArrayAccess, \Js
      */
     protected static $setters = [
         'label' => 'setLabel',
-        'line' => 'setLine',
         'type' => 'setType',
         'value' => 'setValue'
     ];
@@ -201,7 +196,6 @@ class ModelsLineKeyProcessedTempData implements ModelInterface, ArrayAccess, \Js
      */
     protected static $getters = [
         'label' => 'getLabel',
-        'line' => 'getLine',
         'type' => 'getType',
         'value' => 'getValue'
     ];
@@ -264,7 +258,6 @@ class ModelsLineKeyProcessedTempData implements ModelInterface, ArrayAccess, \Js
     public function __construct(?array $data = null)
     {
         $this->setIfExists('label', $data ?? [], null);
-        $this->setIfExists('line', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('value', $data ?? [], null);
     }
@@ -334,33 +327,6 @@ class ModelsLineKeyProcessedTempData implements ModelInterface, ArrayAccess, \Js
             throw new \InvalidArgumentException('non-nullable label cannot be null');
         }
         $this->container['label'] = $label;
-
-        return $this;
-    }
-
-    /**
-     * Gets line
-     *
-     * @return int|null
-     */
-    public function getLine()
-    {
-        return $this->container['line'];
-    }
-
-    /**
-     * Sets line
-     *
-     * @param int|null $line line
-     *
-     * @return self
-     */
-    public function setLine($line)
-    {
-        if (is_null($line)) {
-            throw new \InvalidArgumentException('non-nullable line cannot be null');
-        }
-        $this->container['line'] = $line;
 
         return $this;
     }

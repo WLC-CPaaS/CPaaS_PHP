@@ -58,15 +58,7 @@ class ServiceImpersonateUserOutputFull implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'account_id' => 'string',
-        'account_name' => 'string',
-        'auth_token' => 'string',
-        'cluster_id' => 'string',
-        'is_master_account' => 'bool',
-        'is_reseller' => 'bool',
-        'owner_id' => 'string',
-        'reseller_id' => 'string',
-        'user_info' => '\OpenAPI\Client\Model\ServiceImpersonatedUserInfo'
+        'auth_token' => 'string'
     ];
 
     /**
@@ -77,15 +69,7 @@ class ServiceImpersonateUserOutputFull implements ModelInterface, ArrayAccess, \
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'account_id' => null,
-        'account_name' => null,
-        'auth_token' => null,
-        'cluster_id' => null,
-        'is_master_account' => null,
-        'is_reseller' => null,
-        'owner_id' => null,
-        'reseller_id' => null,
-        'user_info' => null
+        'auth_token' => null
     ];
 
     /**
@@ -94,15 +78,7 @@ class ServiceImpersonateUserOutputFull implements ModelInterface, ArrayAccess, \
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'account_id' => false,
-        'account_name' => false,
-        'auth_token' => false,
-        'cluster_id' => false,
-        'is_master_account' => false,
-        'is_reseller' => false,
-        'owner_id' => false,
-        'reseller_id' => false,
-        'user_info' => false
+        'auth_token' => false
     ];
 
     /**
@@ -191,15 +167,7 @@ class ServiceImpersonateUserOutputFull implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $attributeMap = [
-        'account_id' => 'account_id',
-        'account_name' => 'account_name',
-        'auth_token' => 'auth_token',
-        'cluster_id' => 'cluster_id',
-        'is_master_account' => 'is_master_account',
-        'is_reseller' => 'is_reseller',
-        'owner_id' => 'owner_id',
-        'reseller_id' => 'reseller_id',
-        'user_info' => 'user_info'
+        'auth_token' => 'auth_token'
     ];
 
     /**
@@ -208,15 +176,7 @@ class ServiceImpersonateUserOutputFull implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $setters = [
-        'account_id' => 'setAccountId',
-        'account_name' => 'setAccountName',
-        'auth_token' => 'setAuthToken',
-        'cluster_id' => 'setClusterId',
-        'is_master_account' => 'setIsMasterAccount',
-        'is_reseller' => 'setIsReseller',
-        'owner_id' => 'setOwnerId',
-        'reseller_id' => 'setResellerId',
-        'user_info' => 'setUserInfo'
+        'auth_token' => 'setAuthToken'
     ];
 
     /**
@@ -225,15 +185,7 @@ class ServiceImpersonateUserOutputFull implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $getters = [
-        'account_id' => 'getAccountId',
-        'account_name' => 'getAccountName',
-        'auth_token' => 'getAuthToken',
-        'cluster_id' => 'getClusterId',
-        'is_master_account' => 'getIsMasterAccount',
-        'is_reseller' => 'getIsReseller',
-        'owner_id' => 'getOwnerId',
-        'reseller_id' => 'getResellerId',
-        'user_info' => 'getUserInfo'
+        'auth_token' => 'getAuthToken'
     ];
 
     /**
@@ -293,15 +245,7 @@ class ServiceImpersonateUserOutputFull implements ModelInterface, ArrayAccess, \
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('account_id', $data ?? [], null);
-        $this->setIfExists('account_name', $data ?? [], null);
         $this->setIfExists('auth_token', $data ?? [], null);
-        $this->setIfExists('cluster_id', $data ?? [], null);
-        $this->setIfExists('is_master_account', $data ?? [], null);
-        $this->setIfExists('is_reseller', $data ?? [], null);
-        $this->setIfExists('owner_id', $data ?? [], null);
-        $this->setIfExists('reseller_id', $data ?? [], null);
-        $this->setIfExists('user_info', $data ?? [], null);
     }
 
     /**
@@ -347,60 +291,6 @@ class ServiceImpersonateUserOutputFull implements ModelInterface, ArrayAccess, \
 
 
     /**
-     * Gets account_id
-     *
-     * @return string|null
-     */
-    public function getAccountId()
-    {
-        return $this->container['account_id'];
-    }
-
-    /**
-     * Sets account_id
-     *
-     * @param string|null $account_id account_id
-     *
-     * @return self
-     */
-    public function setAccountId($account_id)
-    {
-        if (is_null($account_id)) {
-            throw new \InvalidArgumentException('non-nullable account_id cannot be null');
-        }
-        $this->container['account_id'] = $account_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets account_name
-     *
-     * @return string|null
-     */
-    public function getAccountName()
-    {
-        return $this->container['account_name'];
-    }
-
-    /**
-     * Sets account_name
-     *
-     * @param string|null $account_name account_name
-     *
-     * @return self
-     */
-    public function setAccountName($account_name)
-    {
-        if (is_null($account_name)) {
-            throw new \InvalidArgumentException('non-nullable account_name cannot be null');
-        }
-        $this->container['account_name'] = $account_name;
-
-        return $this;
-    }
-
-    /**
      * Gets auth_token
      *
      * @return string|null
@@ -423,168 +313,6 @@ class ServiceImpersonateUserOutputFull implements ModelInterface, ArrayAccess, \
             throw new \InvalidArgumentException('non-nullable auth_token cannot be null');
         }
         $this->container['auth_token'] = $auth_token;
-
-        return $this;
-    }
-
-    /**
-     * Gets cluster_id
-     *
-     * @return string|null
-     */
-    public function getClusterId()
-    {
-        return $this->container['cluster_id'];
-    }
-
-    /**
-     * Sets cluster_id
-     *
-     * @param string|null $cluster_id cluster_id
-     *
-     * @return self
-     */
-    public function setClusterId($cluster_id)
-    {
-        if (is_null($cluster_id)) {
-            throw new \InvalidArgumentException('non-nullable cluster_id cannot be null');
-        }
-        $this->container['cluster_id'] = $cluster_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_master_account
-     *
-     * @return bool|null
-     */
-    public function getIsMasterAccount()
-    {
-        return $this->container['is_master_account'];
-    }
-
-    /**
-     * Sets is_master_account
-     *
-     * @param bool|null $is_master_account is_master_account
-     *
-     * @return self
-     */
-    public function setIsMasterAccount($is_master_account)
-    {
-        if (is_null($is_master_account)) {
-            throw new \InvalidArgumentException('non-nullable is_master_account cannot be null');
-        }
-        $this->container['is_master_account'] = $is_master_account;
-
-        return $this;
-    }
-
-    /**
-     * Gets is_reseller
-     *
-     * @return bool|null
-     */
-    public function getIsReseller()
-    {
-        return $this->container['is_reseller'];
-    }
-
-    /**
-     * Sets is_reseller
-     *
-     * @param bool|null $is_reseller is_reseller
-     *
-     * @return self
-     */
-    public function setIsReseller($is_reseller)
-    {
-        if (is_null($is_reseller)) {
-            throw new \InvalidArgumentException('non-nullable is_reseller cannot be null');
-        }
-        $this->container['is_reseller'] = $is_reseller;
-
-        return $this;
-    }
-
-    /**
-     * Gets owner_id
-     *
-     * @return string|null
-     */
-    public function getOwnerId()
-    {
-        return $this->container['owner_id'];
-    }
-
-    /**
-     * Sets owner_id
-     *
-     * @param string|null $owner_id owner_id
-     *
-     * @return self
-     */
-    public function setOwnerId($owner_id)
-    {
-        if (is_null($owner_id)) {
-            throw new \InvalidArgumentException('non-nullable owner_id cannot be null');
-        }
-        $this->container['owner_id'] = $owner_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets reseller_id
-     *
-     * @return string|null
-     */
-    public function getResellerId()
-    {
-        return $this->container['reseller_id'];
-    }
-
-    /**
-     * Sets reseller_id
-     *
-     * @param string|null $reseller_id reseller_id
-     *
-     * @return self
-     */
-    public function setResellerId($reseller_id)
-    {
-        if (is_null($reseller_id)) {
-            throw new \InvalidArgumentException('non-nullable reseller_id cannot be null');
-        }
-        $this->container['reseller_id'] = $reseller_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets user_info
-     *
-     * @return \OpenAPI\Client\Model\ServiceImpersonatedUserInfo|null
-     */
-    public function getUserInfo()
-    {
-        return $this->container['user_info'];
-    }
-
-    /**
-     * Sets user_info
-     *
-     * @param \OpenAPI\Client\Model\ServiceImpersonatedUserInfo|null $user_info user_info
-     *
-     * @return self
-     */
-    public function setUserInfo($user_info)
-    {
-        if (is_null($user_info)) {
-            throw new \InvalidArgumentException('non-nullable user_info cannot be null');
-        }
-        $this->container['user_info'] = $user_info;
 
         return $this;
     }
